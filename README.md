@@ -2,7 +2,7 @@
 
 Este projeto nada mais é do que uma implementação básica com Vue.js, conforme a apostila nos explicou.
 
-## Passos para Criação: 
+## Passos feitos na hora para Criação: 
 
 1. **Inicialização do Projeto**
    - Criação do repositório local e inicialização do Git.
