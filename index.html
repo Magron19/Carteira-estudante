@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteira de Estudante</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Carteira de Estudante</h1>
+        <div class="container" :class="{ 'tema-escuro': modoEscuro }">
+          
+            <div class="formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" v-model="nome">
+                
+                <label for="instituicao">Instituição:</label>
+                <input type="text" id="instituicao" v-model="instituicao">
+                
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" v-model="curso">
+                
+                <label for="novaTarefa">Adicionar Informações:</label>
+                <input type="text" id="novaTarefa" v-model="novaTarefa" @keyup.enter="adicionarTarefa">
+                <button @click="adicionarTarefa">Adicionar</button>
+                
+                <label>
+                    <input type="checkbox" v-model="modoEscuro"> Modo Escuro
+                </label>
+                
+                <button class="botao-estado" @click="alternarEstadoCarteira">
+                    {{ carteiraCompleta ? 'Marcar como Incompleta' : 'Marcar como Completa' }}
+                </button>
+            </div>
+            
+            
+            <div class="carteirinha" v-if="carteiraCompleta">
+                <h2>Nome: {{ nome }}</h2>
+                <h3>Instituição: {{ instituicao }}</h3>
+                <h3>Curso: {{ curso }}</h3>
+                <ul>
+                    <li v-for="(tarefa, index) in tarefas" :key="index">{{ tarefa }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="meuScript.js"></script>
+</body>
+</html>
