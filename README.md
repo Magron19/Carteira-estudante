@@ -1,6 +1,6 @@
 # Carteira de Estudante - Versão 01
 
-Este projeto nada mais é do que uma implementação básica com Vue.js, conforme a apostila nos explicou.
+Este projeto se rerefe à uma implementação básica com Vue.js, conforme nosso professor e a apostila nos explicaram.
 
 ## Passos feitos na hora para Criação: 
 
